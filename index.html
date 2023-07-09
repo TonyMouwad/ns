@@ -1,20 +1,9 @@
 
-
-<!--<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-   
-
-<button>New Message</button>
-</body>
-</html>--->
-
 <html>
   <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <style>
         body{
@@ -32,6 +21,7 @@ section{
   transform: translate(-50%, 50%);
   color: white;
   text-align: center;
+  padding-bottom: 50%;
 }
 
 button, input{
@@ -72,8 +62,10 @@ input:focus{
     color: white;
     text-align: center;
   }
-  #input{
+  #answerDiv{
     /*width: 600px !important;*/
+    font-size: x-large;
+    font-family: 'Noto Sans Arabic', sans-serif;
   }
   }
 
@@ -111,7 +103,7 @@ input:focus{
           }
         });
         
-              var answerArray = new Array();                 
+               var answerArray = new Array();        
                 answerArray[0] = "لكِنِّي دَائِمًا مَعَكَ .أَمْسَكْتَ بِيَدِي الْيُمْنَى .بِرَأْيِكَ تَهْدِينِي، وَبَعْدُ إِلَى مَجْدٍ تَأْخُذُنِي .سفر المزامير23:73-24";
                 answerArray[1] = "أُعَلِّمُكَ وَأُرْشِدُكَ الطَّرِيقَ الَّتِي تَسْلُكُهَا .أَنْصَحُكَ .عَيْنِي عَلَيْكَ .سفر المزامير8:32";
                 answerArray[2] = "وَأُذُنَاكَ تَسْمَعَانِ كَلِمَةً خَلْفَكَ قَائِلَة:ً» هذِهِ هِيَ الطَّرِيقُ .اسْلُكُوا فِيهَا .«حِينَمَا تَمِيلُونَ إِلَى الْيَمِينِ وَحِينَمَا تَمِيلُونَ إِلَى الْيَسَارِ .سفر إشعياء21:30";
@@ -140,7 +132,8 @@ input:focus{
                 answerArray[25] = "فَتِّشُوا الْكُتُبَ لأنَّكُمْ تَظُنُّونَ أَنَّ لَكُمْ فِيهَا حَيَاةً أَبَدِيَّةً .وَهِيَ الَّتِي تَشْهَدُ لِي .إنجيل يوحنا39:5";
                 answerArray[26] = "لأنَّكَ لَنْ تَتْرُكَ نَفْسِي فِي الْهَاوِيَةِ .لَنْ تَدَعَ تَقِيَّكَ يَرَى فَسَادًا .سفر المزامير10:16";
 
-        
+                
+                
                 var i = Math.floor(r_text.length * Math.random());
         
                 document.write("<br /><br /><br /><center><FONT SIZE=72><FONT COLOR='#10cab7'>DCCE Said:</FONT></center><br />"+"<br /><br /><br /><br /><br /><br /><br /><center><FONT SIZE=72><FONT COLOR='#0000'>" +
@@ -151,9 +144,8 @@ input:focus{
               function getAnswer() {
                 document.getElementById('output').innerHTML= "dear/ " +  input.value;
                 document.getElementById('answerDiv').innerHTML = 
-                  input.value + answerArray[Math.floor(Math.random() * answerArray.length)];
+                   answerArray[Math.floor(Math.random() * answerArray.length)];
                   
-              
               }
         
             </script>
