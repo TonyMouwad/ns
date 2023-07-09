@@ -18,7 +18,7 @@ section{
   position: absolute;
   top: 5rem;
   left: 50%;
-  transform: translate(-50%, 50%);
+  transform: translate(-50%, 10%);
   color: white;
   text-align: center;
   padding-bottom: 50%;
@@ -52,8 +52,12 @@ input:focus{
   background-color: white;
   color: black;
 }
-
-@media screen and (min-width: 660px) {
+#answerDiv{
+    /*width: 600px !important;*/
+    font-size: x-large;
+    font-family: 'Noto Sans Arabic', sans-serif;
+  }
+@media screen and (max-width: 660px) {
     section {
     position: absolute;
     /* top: 5rem; */
@@ -62,11 +66,7 @@ input:focus{
     color: white;
     text-align: center;
   }
-  #answerDiv{
-    /*width: 600px !important;*/
-    font-size: x-large;
-    font-family: 'Noto Sans Arabic', sans-serif;
-  }
+  
   }
 
     </style>
