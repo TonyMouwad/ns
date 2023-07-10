@@ -16,7 +16,10 @@
   */
   
   body {
-    background: #0B1319;
+    /*background: #0B1319;*/
+    background-image: url("16-9.jpg");
+    background-repeat: no-repeat;
+   background-size: cover;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -29,6 +32,7 @@
   }
 
   #answerDiv{
+    color: #5c0505;
     font-size:large;
   }
 
