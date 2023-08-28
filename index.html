@@ -1,0 +1,226 @@
+
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body{
+  /*background-color: #0093E9;
+  background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);*/
+  font-family:'Roboto', sans-serif;
+}
+
+/**
+ * Fancy border
+ * ============
+*/
+
+.fancy-border {
+    border: 25px solid #B88846;
+    border-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='75' height='75'%3E%3Cg fill='none' stroke='%23B88846' stroke-width='2'%3E%3Cpath d='M1 1h73v73H1z'/%3E%3Cpath d='M8 8h59v59H8z'/%3E%3Cpath d='M8 8h16v16H8zM51 8h16v16H51zM51 51h16v16H51zM8 51h16v16H8z'/%3E%3C/g%3E%3Cg fill='%23B88846'%3E%3Ccircle cx='16' cy='16' r='2'/%3E%3Ccircle cx='59' cy='16' r='2'/%3E%3Ccircle cx='59' cy='59' r='2'/%3E%3Ccircle cx='16' cy='59' r='2'/%3E%3C/g%3E%3C/svg%3E") 25;
+  }
+  
+  
+  
+  /**
+   * Pen Specific
+   * ============
+  */
+  
+  body {
+    /*background: #0B1319;*/
+    background-image: url("00.jpg");
+    background-repeat: no-repeat;
+   background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*min-height: 100vh;*/
+  }
+  
+  div {
+    width: 500px;
+    height: max-content;
+  }
+
+  #answerDiv{
+    color: #ffffff;
+    font-size:large;
+  }
+
+  #input{
+    max-width: 600px;
+  }
+
+main{
+  position: relative;
+}
+section{
+  position: absolute;
+  top: 5rem;
+  left: 50%;
+  transform: translate(-50%, 10%);
+  color: white;
+  text-align: center;
+  padding-bottom: 50%;
+}
+
+button, input{
+  background-color: inherit;
+  color: white;
+  margin: 0.5em;
+  font-weight: 300;
+  padding: 0.5em;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.5em;
+  border: 1px solid white;
+  border-radius: 0.2em;
+  transition: 0.3s all;
+}
+button:hover, input:hover{
+  background-color: white;
+  color: black;
+  cursor: pointer;
+}
+button:focus{
+  outline: 0;
+}
+button:active{
+  transform: translate(0, 4px);
+}
+input:focus{
+  outline: 0;
+  background-color: white;
+  color: black;
+}
+#answerDiv{
+    /*width: 600px !important;*/
+    font-size: x-large;
+    font-family: 'Noto Sans Arabic', sans-serif;
+  }
+@media screen and (max-width: 660px) {
+    section {
+    position: absolute;
+    /* top: 5rem; */
+    left: 50%;
+    transform: translate(-50%, 100%);
+    color: white;
+    text-align: center;
+  }
+  
+  }
+
+    </style>
+  </head>
+  <body>
+    
+
+        <section>
+          <img src="ggg.png" alt="logo" style="width: 30%;">
+          <a herf="msg3.html"><img src="2222ed-1.png" alt="logo" style=" width: 50%; float: left;"></a>
+          <br><br><br>       
+          <input id="input" type="text" placeholder="Type something"/>
+          <button id="button" onclick="printInput(), getAnswer()">Print Input</button>
+          
+          
+            <h2 id="output"></h2>
+          <div id='answerDiv' class="fancy-border"></div>
+        <section>
+
+
+
+      <script type='text/javascript'>
+        const input = document.getElementById('input');
+        const output = document.getElementById('output');
+        
+        function printInput(){
+          output.innerHTML = input.value;
+        }
+        
+        input.addEventListener("keyup", function(event) {
+          // Number 13 is the "Enter" key on the keyboard
+          if (event.keyCode === 13) {
+            // Cancel the default action, if needed
+            event.preventDefault();
+            // Trigger the button element with a click
+            document.getElementById("button").click();
+          }
+        });
+        
+               var answerArray = new Array();        
+                answerArray[0] = "الذين يتقون الرب يجدون العدل و يوقدون من الاحكام مصباحا لهم (سي 32 : 20)";
+                answerArray[1] = "إذ صرت عزيزا في عيني مكرما، وأنا قد أحببتك. (إش 43 : 4)";
+                answerArray[2] = "من اتقى الرب فطوبى لنفسه (سي 34 : 17)";
+                answerArray[3] = "قَلْبُ الانْسَانِ يُفَكِّرُ فِي طَرِيقِه،ِ وَالرَّبُّ يَهْدِي خَطْوَتَهُ .سفر أمثال9:16";
+                answerArray[4] = "الرجل الحكيم يمتلئ بركة و يغبطه كل من يراه (سي 37 : 27)";
+                answerArray[5] = " لا تَخَف،ْ لأنَّ الَّذِينَ مَعَنَا أَكْثَرُ مِنَ الَّذِينَ مَعَهُمْ .«سفر الملوك الثانى16:6";
+                answerArray[6] = "من اتقى الرب فلا يخاف و لا يفزع لانه هو رجاؤه (سي 34 : 16)";
+                answerArray[7] = "فانه ليس كل شيء ينفع كل احد و لا كل نفس ترضى بكل امر (سي 37 : 31)";
+                answerArray[8] = "لِتَتَشَدَّدْ وَلْتَتَشَجَّعْ قُلُوبُكُم،ْ يَا جَمِيعَ الْمُنْتَظِرِينَ الرَّبَّ .سفر المزامير24:31";
+                answerArray[9] = "لأنِّي أَنَا الرَّبُّ إِلهُكَ الْمُمْسِكُ بِيَمِينِك،َ الْقَائِلُ لَك:َ لاتَخَفْ .أَنَا أُعِينُكَ .سفر إشعياء13:41";
+                answerArray[10] = "صَالِحٌ هُوَ الرَّبُّ .حِصْنٌ فِي يَوْمِ الضَّيق،ِ وَهُوَ يَعْرِفُ الْمُتَوَكِّلِينَ عَلَيْهِ .سفر ناحوم7:1";
+                answerArray[11] = "إِذَا سَقَطَ لايَنْطَرِح،ُ لأنَّ الرَّبَّ مُسْنِدٌ يَدَهُ .سفر المزامير24:37";
+                answerArray[12] = "لأنَّكَ أَنْتَ تُضِيءُ سِرَاجِي .الرَّبُّ إِلهِي يُنِيرُ ظُلْمَتِي .سفر المزامير28:18";
+                answerArray[13] = "إِنْ سَلَكْتُ فِي وَسَطِ الضِّيْقِ تُحْيِنِي .عَلَى غَضَبِ أَعْدَائِي تَمُدُّ يَدَك،َ وَتُخَلِّصُنِي يَمِينُكَ .سفر المزامير7:138";
+                answerArray[14] = "وَيَكُونُ الرَّبُّ مَلْجَأً لِلْمُنْسَحِقِ .مَلْجَأً فِي أَزْمِنَةِ الضِّيقِ .سفر المزامير9:9";
+                answerArray[15] = "الحكيم يرث ثقة شعبه و اسمه يحيا الى الابد (سي 37 : 29)";
+                answerArray[16] = "أَنْتَ سِتْرٌ لِي .مِنَ الضِّيقِ تَحْفَظُنِي .بِتَرَنُّمِ النَّجَاةِ تَكْتَنِفُنِي .سفر المزامير7:32";
+                answerArray[17] = "الرَّبُّ يَفْتَحُ أَعْيُنَ الْعُمْيِ .الرَّبُّ يُقَوِّمُ الْمُنْحَنِينَ .الرَّبُّ يُحِبُّ الصِّدِّيقِينَ .سفر المزامير8:146";
+                answerArray[18] = "فِي سِتِّ شَدَائِدَ يُنَجِّيك،َ وَفِي سَبْعٍ لايَمَسُّكَ سُوءٌ .سفر أيوب19:5";
+                answerArray[19] = "وَيَكُونُ فِي يَوْمٍ يُرِيحُكَ الرَّبُّ مِنْ تَعَبِكَ وَمِنِ انْزِعَاجِك،َ وَمِنَ الْعُبُودِيَّةِ الْقَاسِيَةِ الَّتِي اسْتُعْبِدْتَ بِهَا، سفر إشعياء3:14";
+                answerArray[20] = "سَلامًا أَتْرُكُ لَكُمْ .سَلامِي أُعْطِيكُمْ .لَيْسَ كَمَا يُعْطِي الْعَالَمُ أُعْطِيكُمْ أَنَا .لاتَضْطَرِبْ قُلُوبُكُمْ وَلاتَرْهَبْ .إنجيل يوحنا27:14";
+                answerArray[21] = "َاعْلَمِ الْيَوْمَ وَرَدِّدْ فِي قَلْبِكَ أَنَّ الرَّبَّ هُوَ الإلهُ فِي السَّمَاءِ مِنْ فَوْق،ُ وَعَلَى الأرْضِ مِنْ أَسْفَلُ .لَيْسَ سِوَاهُ .سفر التثنية4:39";
+                answerArray[22] = "وَاحِدٌ هُوَ وَاضِعُ النَّامُوس،ِ الْقَادِرُ أَنْ يُخَلِّصَ وَيُهْلِكَ .رسالة يعقوب12:4";
+                answerArray[23] = "الغنى و القوة يعزان القلب لكن مخافة الرب فوق كليهما (سي 40 : 26)";
+                answerArray[24] = "وَأَنَا عَلِمْتُ أَنَّكَ فِي كُلِّ حِينٍ تَسْمَعُ لِي .وَلكِنْ لأجْلِ هذَا الْجَمْعِ الْوَاقِفِ قُلْت،ُ لِيُؤْمِنُوا أَنَّكَ أَرْسَلْتَنِي .«إنجيل يوحنا42:11";
+                answerArray[25] = " فتجد نعمة وفطنة صالحة في أعين الله والناس. (أم 3 : 4)";
+                answerArray[26] = "طوبى للإنسان الذي يجد الحكمة، وللرجل الذي ينال الفهم، (أم 3 : 13)";
+                answerArray[27] = "الحكمة هي أثمن من اللآلئ، وكل جواهرك لا تساويها. (أم 3 : 15)";
+                answerArray[28] = " هُوَ أَحَبَّنَا، وَأَرْسَلَ ابْنَهُ كَفَّارَةً لِخَطَايَانَا.  يوحنا الأولى10:4";
+                answerArray[29] = "يا ابني، لا تحتقر تأديب الرب ولا تكره توبيخه، (أم 3 : 11)";
+                answerArray[30] = "لأن الذي يحبه الرب يؤدبه، وكأب بابن يسر به. (أم 3 : 12)";
+                answerArray[31] = "اذهب إلى النملة أيها الكسلان. تأمل طرقها وكن حكيما. (أم 6 : 6)";
+                answerArray[32] = "فوق كل تحفظ احفظ قلبك، لأن منه مخارج الحياة. (أم 4 : 23)";
+                answerArray[33] = "لأن الحكمة خير من اللآلئ، وكل الجواهر لا تساويها. (أم 8 : 11)";
+                answerArray[34] = " فان روحي احلى من العسل و ميراثي الذ من شهد العسل (سي 24 : 27)";
+                answerArray[35] = "لا تخف لأني فديتك. دعوتك باسمك. أنت لي. (إش 43 : 1)";
+                answerArray[36] = "وتبتهج كليتاي إذا تكلمت شفتاك بالمستقيمات. (أم 23 : 16)";
+                answerArray[37] = "طوبى للرجل الذي يحتمل التجربة، لأنه إذا تزكى ينال إكليل الحياة الذي وعد به الرب للذين يحبونه. (يع 1 : 12)";
+                answerArray[38] = "مخافة الرب اعلى من كل شيء (سي 25 : 14)";
+                answerArray[39] = "ان لم تدخر في شبابك فكيف تجد في شيخوختك (سي 25 : 5)";
+                answerArray[40] = "ثُمَّ كَلَّمَهُمْ يَسُوعُ أَيْضًا قَائِلًا: «أَنَا هُوَ نُورُ الْعَالَمِ. مَنْ يَتْبَعْنِي فَلاَ يَمْشِي فِي الظُّلْمَةِ بَلْ يَكُونُ لَهُ نُورُ الْحَيَاةِ». (يو 8: 12).";
+                answerArray[41] = "هُوَذَا اللهُ خَلاَصِي فَأَطْمَئِنُّ وَلاَ أَرْتَعِبُ، لأَنَّ يَاهَ يَهْوَهَ قُوَّتِي وَتَرْنِيمَتِي وَقَدْ صَارَ لِي خَلاَصًا». (إش 12: 2).";
+                answerArray[42] = "لاَ تَحْجُبْ وَجْهَكَ عَنِّي فِي يَوْمِ ضِيقِي. أَمِلْ إِلَيَّ أُذُنَكَ فِي يَوْمِ أَدْعُوكَ. اسْتَجِبْ لِي سَرِيعًا. (مز 102: 2).";
+                answerArray[43] = "وَسَلاَمُ اللهِ الَّذِي يَفُوقُ كُلَّ عَقْل، يَحْفَظُ قُلُوبَكُمْ وَأَفْكَارَكُمْ فِي الْمَسِيحِ يَسُوعَ. (في 4: 7)";
+                answerArray[44] = "«لأَنَّهُ لَيْسَ شَيْءٌ غَيْرَ مُمْكِنٍ لَدَى اللهِ». (لو 1: 37).";
+                answerArray[45] = "َنَظَرَ إِلَيْهِمْ يَسُوعُ وَقَالَ: «عِنْدَ النَّاسِ غَيْرُ مُسْتَطَاعٍ، وَلكِنْ لَيْسَ عِنْدَ اللهِ، لأَنَّ كُلَّ شَيْءٍ مُسْتَطَاعٌ عِنْدَ اللهِ». (مر 10: 27).";
+                answerArray[46] = "إذ صرت عزيزا في عيني مكرما، وأنا قد أحببتك. (إش 43 : 4)";
+                answerArray[47] = "ُنْظُرُوا إِلَى طُيُورِ السَّمَاءِ: إِنَّهَا لاَ تَزْرَعُ وَلاَ تَحْصُدُ وَلاَ تَجْمَعُ إِلَى مَخَازِنَ، وَأَبُوكُمُ السَّمَاوِيُّ يَقُوتُهَا. أَلَسْتُمْ أَنْتُمْ بِالْحَرِيِّ أَفْضَلَ مِنْهَا؟ (مت 6: 26).";
+                answerArray[48] = "وَيَتَّكِلُ عَلَيْكَ الْعَارِفُونَ اسْمَكَ، لأَنَّكَ لَمْ تَتْرُكْ طَالِبِيكَ يَا رَبُّ. (مز 9 : 10)";
+                answerArray[49] = "لأَنَّ الرَّبَّ عَادِلٌ وَيُحِبُّ الْعَدْلَ. الْمُسْتَقِيمُ يُبْصِرُ وَجْهَهُ. (مز 11 : 7)";
+                answerArray[50] = "أَمَّا أَنَا فَعَلَى رَحْمَتِكَ تَوَكَّلْتُ. يَبْتَهِجُ قَلْبِي بِخَلاَصِكَ. (مز 13 : 5)";
+                answerArray[51] = "إني كل من أحبه أوبخه وأؤدبه. فكن غيورا وتب. (رؤ 3 : 19)";
+                answerArray[52] = "طوبى للرجل الذي يتامل في الحكمة و يتحدث بها في عقله (سي 14 : 22)";
+                answerArray[53] = "لا تبدل صديقا بشيء زمني و لا اخا خالصا بذهب اوفير (سي 7 : 20)";
+                answerArray[54] = "قبل ان تموت احسن الى صديقك و على قدر طاقتك ابسط يدك و اعطه (سي 14 : 13)";
+                answerArray[55] = "هو صَنع الانسان في البدء و تركه في يد اختياره (سي 15 : 14)";
+                answerArray[56] = "الذي يتقي الرب يعمل ذلك و الذي يتمسك بالشريعة ينال الحكمة (سي 15 : 1)";
+                
+                var i = Math.floor(r_text.length * Math.random());
+        
+                    
+                let msg = " dear ";
+
+              function getAnswer() {
+                document.getElementById('output').innerHTML= "dear/ " +  input.value;
+                document.getElementById('answerDiv').innerHTML = 
+                   answerArray[Math.floor(Math.random() * answerArray.length)];
+                  
+              }
+        
+            </script>
+        
+  </body>
+</html>
